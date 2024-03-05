@@ -1,4 +1,8 @@
-# LG-Aimers
+# LG_Aimers 4기 
+
+교육기간 : 2024.01.02 ~ 2024.02.26
+Phase I 온라인 AI 교육 : AI기술 전반에 대한 이해, 해커톤 문제를 풀기 위해 필요한 도메인 지식 습득
+Phase II 온라인 해커톤 : LG 계열사가 보유한 산업의 현장 Data를 기반으로 AI를 활용하여 문제를 해결
 
 ### 영업 성공 여부 분류 경진대회
 
@@ -19,6 +23,37 @@
 ## Dataset Info.
 
 ### feature 정리
+
+1) bant_submit : MQL 구성 요소들 중 [1]Budget(예산), [2]Title(고객의 직책/직급), [3]Needs(요구사항),  [4]Timeline(희망 납기일)  :  4 가지 항목에 대해서 작성된 값의 비율
+2) customer_country : 고객의 국적
+3) business_unit MQL : 요청 상품에 대응되는 사업부
+4) com_reg_ver_win_rate  :  Vertical Level 1, business unit, region 을 기준으로 oppty 비율을 계산
+5) customer_idx  :  고객의 회사명
+6) customer_type  :  고객 유형
+7) enterprise : Global 기업인지, Small/Medium 규모의 기업인지
+8) historical_existing_cnt  :  이전에 Converted(영업 전환) 되었던 횟수
+9) id_strategic_ver :  (도메인 지식) 특정 사업부(Business Unit), 특정 사업 영역(Vertical Level1)에 대해 가중치를 부여
+10) it_strategic_ver : (도메인 지식) 특정 사업부(Business Unit), 특정 사업 영역(Vertical Level1)에 대해 가중치를 부여
+11) idit_strategic_ver  :  Id_strategic_ver 이나 it_strategic_ver 값 중 하나라도 1 의 값을 가지면 1 값으로 표현
+12) customer_job  :  고객의 직업군
+13) lead_desc_length  :  고객이 작성한 Lead Descriptoin 텍스트 총 길이
+14) inquiry_type  :   고객의 문의 유형
+15) product_category  :  요청 제품 카테고리
+16) product_subcategory  :  요청 제품 하위 카테고리
+17) product_modelname  :  요청 제품 모델명
+18) customer_country.1  :  담당 자사 법인명 기반의 지역 정보(대륙)
+19) customer_position  :  고객의 회사 직책
+20) response_corporate  :  담당 자사 법인명
+21) expected_timeline  :  고객의 요청한 처리 일정
+22) ver_cus :  특정 Vertical Level 1(사업영역) 이면서 Customer_type(고객 유형)이 소비자(End-user)인 경우에 대한 가중치
+23) ver_pro  :  특정 Vertical Level 1(사업영역) 이면서 특정 Product Category(제품 유형)인 경우에 대한 가중치
+24) ver_win_rate_x  : 전체 Lead 중에서 Vertical 을 기준으로 Vertical 수 비율과 Vertical 별 Lead 수 대비 영업 전환 성공 비율 값을 곱한 값
+25) ver_win_ratio_per_bu  :  특정 Vertical Level1 의 Business Unit 별 샘플 수 대비 영업 전환된 샘플 수의 비율을 계산
+26) business_area  :  고객의 사업 영역
+27) business_subarea  :  고객의 세부 사업 영역
+28) lead_owner  :  영업 담당자 이름
+29) is_converted  :  영업 성공 여부. True 일 시 성공.
+
 ![피처](https://github.com/mJekal/ss/assets/132838012/9f6bb2c5-f5ff-40bc-bccf-451d2f3d86fe)
 
 ### 모델 학습용 데이터셋 (train.csv)
